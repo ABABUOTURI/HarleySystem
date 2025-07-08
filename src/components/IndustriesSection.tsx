@@ -69,7 +69,7 @@ const IndustriesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-5xl font-bold text-orange-500 mb-6">
             Industries We Serve
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -125,10 +125,10 @@ const IndustriesSection = () => {
                       <p className="text-sm text-foreground">{industry.caseStudy}</p>
                     </div>
 
-                    <Button variant="outline" className="w-full group">
+                    {/* <Button variant="outline" className="w-full group">
                       View Solutions
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardContent>
               </Card>
@@ -141,28 +141,34 @@ const IndustriesSection = () => {
           <h3 className="text-2xl font-bold mb-6">Proven Track Record Across Industries</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">15+</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
               <div className="text-sm text-muted-foreground">Industries Served</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">200+</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">200+</div>
               <div className="text-sm text-muted-foreground">Projects Delivered</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
               <div className="text-sm text-muted-foreground">Organizations</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">99%</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">99%</div>
               <div className="text-sm text-muted-foreground">Client Satisfaction</div>
             </div>
           </div>
           
           <div className="mt-8">
-            <Button variant="hero" size="lg">
-              Discuss Your Industry Needs
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <a
+              href="https://wa.me/254720143959"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="lg">
+                Discuss Your Industry Needs
+                {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
+              </Button>
+            </a>
           </div>
         </div>
       </div>

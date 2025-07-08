@@ -126,17 +126,23 @@ All colors MUST be HSL.
 @layer components {
   /* Glassmorphism effect utilities */
   .glass {
-    @apply backdrop-blur-lg bg-white/8 border border-white/15 shadow-xl;
+    @apply backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl;
   }
   
   .glass-card {
-    @apply glass rounded-xl p-6 transition-all duration-300 hover:bg-white/12 hover:border-white/25;
-  }
-  
-  .glass-nav {
-    @apply backdrop-blur-xl bg-white/8 border-b border-white/15 shadow-lg;
+    @apply glass rounded-xl p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/25;
   }
 
+  .no-hover:hover {
+    background-color: inherit !important;
+    border-color: inherit !important;
+  }
+  
+  @layer utilities {
+    .glass-nav {
+      @apply backdrop-blur-xl bg-orange-500/30 border-b border-orange-200/40 shadow-lg;
+    }
+  }
   .glass-primary {
     @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl shadow-2xl;
   }
@@ -151,7 +157,8 @@ All colors MUST be HSL.
 
   /* Gradient utilities */
   .gradient-primary {
-    background: var(--gradient-primary);
+    /* background: var(--gradient-primary); */
+    background: white;
   }
   
   .gradient-hero {
@@ -202,13 +209,36 @@ All colors MUST be HSL.
 }
 
 @keyframes glow-orange {
-  0% { 
-    box-shadow: 0 0 30px hsl(var(--glow-orange) / 0.4);
-    transform: translateY(0px) scale(1);
+  0%, 100% {
+    box-shadow: 0 0 60px 30px rgba(255,140,0,0.25), 0 0 0 0 rgba(255,140,0,0.1);
+    opacity: 0.7;
+    transform: scale(1);
   }
-  100% { 
-    box-shadow: 0 0 60px hsl(var(--glow-orange) / 0.8);
-    transform: translateY(-10px) scale(1.05);
+  50% {
+    box-shadow: 0 0 120px 60px rgba(255,140,0,0.4), 0 0 0 0 rgba(255,140,0,0.1);
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+@keyframes glow-white {
+  0%, 100% {
+    box-shadow: 0 0 60px 30px rgba(255,255,255,0.18), 0 0 0 0 rgba(255,255,255,0.1);
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 120px 60px rgba(255,255,255,0.32), 0 0 0 0 rgba(255,255,255,0.1);
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@layer utilities {
+  .animate-glow-orange {
+    animation: glow-orange 4s ease-in-out infinite alternate;
+  }
+  .animate-glow-white {
+    animation: glow-white 5s ease-in-out infinite alternate;
   }
 }
 
@@ -221,4 +251,15 @@ All colors MUST be HSL.
     box-shadow: 0 0 50px hsl(var(--glow-blue) / 0.7);
     transform: translateX(10px) scale(1.02);
   }
+}
+
+@keyframes slideshow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.slideshow-track {
+  /* The width should be at least twice the total width of the cards for seamless looping */
+}
+.animate-slideshow {
+  animation: slideshow 40s linear infinite;
 }

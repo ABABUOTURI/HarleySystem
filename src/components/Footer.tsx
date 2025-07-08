@@ -7,7 +7,11 @@ const Footer = () => {
     "Biometric Solutions",
     "Payment Integration",
     "Business Intelligence",
-    "Custom Development"
+    "Custom Development",
+    "AI Integrations",
+    "App Development",
+    "System Development",
+    "Web Development"
   ];
 
   const industries = [
@@ -26,25 +30,25 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/308035dd-e0f6-4b74-b000-bef648d52ac3.png" 
-                alt="Harley Systems" 
-                className="h-10 w-auto object-contain bg-transparent"
-              />
-              <span className="text-xl font-bold">Harley Systems</span>
+            <img 
+              src="/assets/logo.png" 
+              alt="Harley Systems" 
+              className="h-20 w-auto object-contain bg-transparent"
+            />
+              <span className="text-xl font-bold text-orange-500">Harley Systems</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Empowering African businesses through innovative technology solutions. 
               Building the future, one solution at a time.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              <a href="#" className="text-orange-500 hover:text-primary-foreground transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              <a href="#" className="text-orange-500 hover:text-primary-foreground transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              <a href="#" className="text-orange-500 hover:text-primary-foreground transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
@@ -52,7 +56,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <h3 className="text-lg font-semibold text-orange-500 mb-6">Our Services</h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
@@ -66,7 +70,7 @@ const Footer = () => {
 
           {/* Industries */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Industries</h3>
+            <h3 className="text-lg font-semibold text-orange-500 mb-6">Industries</h3>
             <ul className="space-y-3">
               {industries.map((industry, index) => (
                 <li key={index}>
@@ -80,7 +84,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-orange-500 mb-6">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-secondary mt-1 flex-shrink-0" />
@@ -108,7 +112,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-primary-foreground/60">
+            <div className="text-sm text-orange-500">
               © 2024 Harley Systems. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">

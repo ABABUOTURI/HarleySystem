@@ -22,7 +22,7 @@ const ServicesSection = () => {
       icon: Code,
       title: "Web Development",
       description: "Modern, responsive websites and web applications built with cutting-edge technologies",
-      features: ["React & Next.js", "E-commerce platforms", "Progressive Web Apps", "SEO optimization"],
+      features: ["E-commerce platforms", "Progressive Web Apps", "SEO optimization","Web Design & Development"],
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
     },
     {
@@ -36,7 +36,7 @@ const ServicesSection = () => {
       icon: Smartphone,
       title: "App Development",
       description: "Native and cross-platform mobile applications for iOS and Android",
-      features: ["Native iOS/Android", "React Native", "Flutter", "App Store deployment"],
+      features: ["Native iOS/Android", "App Store deployment"],
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
     },
     {
@@ -91,11 +91,33 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-background to-muted/20">
+    <section id="services" className="relative overflow-hidden py-24 bg-gradient-to-b from-background to-muted/20">
+      {/* Glowing background elements */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* 1 */}<div className="absolute top-10 left-10 w-40 h-40 bg-orange-400/30 rounded-full blur-3xl animate-glow-orange" />
+        {/* 2 */}<div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-white/20 rounded-full blur-3xl animate-glow-white" />
+        {/* 3 */}<div className="absolute top-20 right-16 w-44 h-44 bg-white/20 rounded-full blur-3xl animate-glow-white" />
+        {/* 4 */}<div className="absolute top-1/2 left-0 -translate-y-1/2 w-36 h-36 bg-orange-400/20 rounded-full blur-3xl animate-glow-orange" />
+        {/* 5 */}<div className="absolute top-1/2 right-0 -translate-y-1/2 w-36 h-36 bg-orange-400/20 rounded-full blur-3xl animate-glow-orange" />
+        {/* Top Left - Orange */}
+        <div className="absolute top-10 left-10 w-56 h-56 bg-orange-400/30 rounded-full blur-3xl animate-glow-orange" />
+        {/* Top Center - White */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-white/20 rounded-full blur-3xl animate-glow-white" />
+        {/* Top Right - White */}
+        <div className="absolute top-20 right-16 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-glow-white" />
+        {/* Center Left - Orange */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-44 h-44 bg-orange-400/20 rounded-full blur-3xl animate-glow-orange" />
+        {/* Center Right - Orange */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-44 h-44 bg-orange-400/20 rounded-full blur-3xl animate-glow-orange" />
+        {/* Bottom Left - White */}
+        <div className="absolute bottom-16 left-24 w-72 h-72 bg-white/20 rounded-full blur-3xl animate-glow-white" />
+        {/* Bottom Right - Orange */}
+        <div className="absolute bottom-10 right-10 w-60 h-60 bg-orange-400/30 rounded-full blur-3xl animate-glow-orange" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-orange-500 mb-6">
             Services We Offer
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -124,7 +146,7 @@ const ServicesSection = () => {
                 </div>
 
                 <CardHeader>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl group-hover:text-orange-500 transition-colors">
                     {service.title}
                   </CardTitle>
                   <CardDescription className="text-muted-foreground">
@@ -156,13 +178,13 @@ const ServicesSection = () => {
             and drive your business growth to the next level.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg">
+            {/* <Button variant="hero" size="lg">
               Get Custom Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg">
               View Case Studies
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

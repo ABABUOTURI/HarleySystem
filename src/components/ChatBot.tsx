@@ -46,7 +46,7 @@ const ChatBot = () => {
   };
 
   const handleWhatsAppRedirect = () => {
-    window.open("https://wa.me/254714205641?text=Hello%20Harley%20Systems,%20I'm%20interested%20in%20your%20services", "_blank");
+    window.open("https://wa.me/254720143959?text=Hello%20Harley%20Systems,%20I'm%20interested%20in%20your%20services", "_blank");
   };
 
   return (
@@ -66,10 +66,10 @@ const ChatBot = () => {
           {/* Header */}
           <div className="bg-secondary/20 p-4 border-b border-white/10">
             <h3 className="text-white font-semibold flex items-center">
-              <img 
-                src="/lovable-uploads/308035dd-e0f6-4b74-b000-bef648d52ac3.png" 
+            <img 
+                src="/assets/logo.png" 
                 alt="Harley Systems" 
-                className="h-6 w-6 mr-2"
+                className="h-20 w-auto object-contain bg-transparent"
               />
               Harley Systems Assistant
             </h3>

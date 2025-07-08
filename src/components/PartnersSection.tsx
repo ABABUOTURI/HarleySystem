@@ -79,7 +79,7 @@ const PartnersSection = () => {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partners.map((partner, index) => (
             <div 
               key={index}
@@ -109,7 +109,7 @@ const PartnersSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Partnership CTA */}
         <div className="text-center mt-16">
@@ -120,13 +120,16 @@ const PartnersSection = () => {
             <p className="text-white/80 mb-6">
               Join our network of trusted partners and help us deliver world-class solutions across Africa
             </p>
-            <a 
-              href="#contact"
-              className="inline-flex items-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              Partner With Us
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
+            <a
+  href="https://wa.me/254720143959"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+>
+  Partner With Us
+  <ExternalLink className="ml-2 h-4 w-4" />
+</a>
+
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ const ContactSection = () => {
     {
       icon: Phone, 
       title: "Phone & WhatsApp",
-      details: ["+254 700 000 000", "+254 711 000 000"],
+      details: ["+254 720143959"],
       description: "Call or text us anytime"
     },
     {
@@ -94,7 +94,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       className="mt-1"
-                      placeholder="John Doe"
+                      placeholder="Kimani Brian"
                     />
                   </div>
                   <div>
@@ -139,7 +139,7 @@ const ContactSection = () => {
 
                 <Button type="submit" variant="hero" size="lg" className="w-full">
                   Send Message
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
                 </Button>
               </form>
             </CardContent>
@@ -177,11 +177,11 @@ const ContactSection = () => {
 
             {/* Office Image */}
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              {/* <img 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" 
                 alt="Modern office space"
                 className="w-full h-64 object-cover"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
               <div className="absolute bottom-4 left-4 text-white">
                 <h4 className="font-semibold">Visit Our Office</h4>
@@ -191,20 +191,20 @@ const ContactSection = () => {
 
             {/* Quick Actions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Button variant="outline" size="lg" className="h-auto py-4">
+              {/* <Button variant="outline" size="lg" className="h-auto py-4">
                 <div className="text-center">
                   <Phone className="h-5 w-5 mx-auto mb-2" />
                   <div className="text-sm font-medium">Call Now</div>
                   <div className="text-xs text-muted-foreground">Immediate Response</div>
                 </div>
-              </Button>
-              <Button variant="secondary" size="lg" className="h-auto py-4">
+              </Button> */}
+              {/* <Button variant="secondary" size="lg" className="h-auto py-4">
                 <div className="text-center">
                   <Calendar className="h-5 w-5 mx-auto mb-2" />
                   <div className="text-sm font-medium">Schedule Demo</div>
                   <div className="text-xs text-muted-foreground">See Our Solutions</div>
                 </div>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

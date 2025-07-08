@@ -19,11 +19,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/308035dd-e0f6-4b74-b000-bef648d52ac3.png" 
-              alt="Harley Systems" 
-              className="h-12 w-auto object-contain bg-transparent"
-            />
+          <img 
+            src="/assets/logo.png" 
+            alt="Harley Systems" 
+            className="h-20 w-auto object-contain bg-transparent"
+          />
             <span className="ml-3 text-xl font-bold gradient-primary bg-clip-text text-transparent">
               Harley Systems
             </span>
@@ -45,12 +45,12 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Button variant="hero" size="sm">
               Get Started
               <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -78,10 +78,10 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <Button variant="hero" size="sm" className="w-full">
+                {/* <Button variant="hero" size="sm" className="w-full">
                   Get Started
                   <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
