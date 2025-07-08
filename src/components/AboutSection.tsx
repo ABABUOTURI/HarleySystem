@@ -62,14 +62,14 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-24 bg-gradient-to-b from-primary/95 to-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Harley Systems
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             A decade of innovation, countless success stories, and a commitment to empowering 
             African businesses through transformative technology solutions.
           </p>
@@ -128,21 +128,16 @@ const AboutSection = () => {
 
         {/* Timeline */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12">Our Journey</h3>
-          <div className="space-y-8">
+          <h3 className="text-3xl font-bold text-center text-white mb-12">Our Journey</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {milestones.map((milestone, index) => (
-              <div key={index} className="flex items-start space-x-6 group">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold group-hover:scale-110 transition-transform duration-300">
-                    {milestone.year.slice(-2)}
-                  </div>
+              <div key={index} className="glass-card text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-sm">{milestone.year.slice(-2)}</span>
                 </div>
-                <div className="glass-card flex-1 group-hover:scale-105 transition-all duration-300">
-                  <h4 className="text-xl font-semibold text-foreground mb-2">
-                    {milestone.year} - {milestone.title}
-                  </h4>
-                  <p className="text-muted-foreground">{milestone.description}</p>
-                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{milestone.year}</h3>
+                <h4 className="text-lg font-semibold text-secondary mb-3">{milestone.title}</h4>
+                <p className="text-white/70 text-sm">{milestone.description}</p>
               </div>
             ))}
           </div>

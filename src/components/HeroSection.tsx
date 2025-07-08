@@ -3,16 +3,17 @@ import { ArrowRight, Code, Shield, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-primary">
       {/* Background with gradient */}
-      <div className="absolute inset-0 gradient-hero opacity-90" />
+      <div className="absolute inset-0 gradient-hero opacity-95" />
       
-      {/* Floating background elements */}
+      {/* Glowing background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse" />
-        <div className="absolute top-40 right-20 w-32 h-32 bg-secondary/20 rounded-full blur-2xl float" />
-        <div className="absolute bottom-40 left-20 w-24 h-24 bg-primary-glow/30 rounded-full blur-xl float" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-white/20 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-secondary/30 rounded-full blur-3xl glow-orange" />
+        <div className="absolute top-60 right-20 w-40 h-40 bg-accent/25 rounded-full blur-3xl glow-blue" />
+        <div className="absolute bottom-40 left-20 w-28 h-28 bg-secondary/25 rounded-full blur-2xl glow-orange" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-20 right-10 w-36 h-36 bg-accent/20 rounded-full blur-3xl glow-blue" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary-glow/10 rounded-full blur-3xl animate-pulse" />
       </div>
 
       {/* Content */}
@@ -21,9 +22,9 @@ const HeroSection = () => {
           {/* Logo and company name */}
           <div className="flex flex-col items-center space-y-4">
             <img 
-              src="/lovable-uploads/009262a1-86e5-4662-a77e-5bf8b65811a4.png" 
+              src="/lovable-uploads/308035dd-e0f6-4b74-b000-bef648d52ac3.png" 
               alt="Harley Systems" 
-              className="h-20 w-auto object-contain bg-transparent filter brightness-0 invert float"
+              className="h-24 w-auto object-contain bg-transparent float drop-shadow-2xl"
             />
             <h1 className="text-5xl md:text-7xl font-bold text-white text-shadow">
               Harley Systems

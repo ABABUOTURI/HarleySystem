@@ -20,10 +20,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/009262a1-86e5-4662-a77e-5bf8b65811a4.png" 
+              src="/lovable-uploads/308035dd-e0f6-4b74-b000-bef648d52ac3.png" 
               alt="Harley Systems" 
               className="h-12 w-auto object-contain bg-transparent"
-              style={{ filter: 'brightness(0) invert(1)' }}
             />
             <span className="ml-3 text-xl font-bold gradient-primary bg-clip-text text-transparent">
               Harley Systems

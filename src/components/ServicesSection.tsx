@@ -10,11 +10,42 @@ import {
   Users,
   BarChart3,
   Shield,
-  ArrowRight
+  ArrowRight,
+  Code,
+  Monitor,
+  Brain
 } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
+    {
+      icon: Code,
+      title: "Web Development",
+      description: "Modern, responsive websites and web applications built with cutting-edge technologies",
+      features: ["React & Next.js", "E-commerce platforms", "Progressive Web Apps", "SEO optimization"],
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+    },
+    {
+      icon: Monitor,
+      title: "System Development", 
+      description: "Enterprise-grade systems designed for scalability and performance",
+      features: ["ERP systems", "CRM solutions", "Inventory management", "Workflow automation"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
+    },
+    {
+      icon: Smartphone,
+      title: "App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android",
+      features: ["Native iOS/Android", "React Native", "Flutter", "App Store deployment"],
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
+    },
+    {
+      icon: Brain,
+      title: "AI Integrations",
+      description: "Intelligent automation and AI-powered solutions to enhance your business processes",
+      features: ["Machine learning", "Natural language processing", "Computer vision", "Predictive analytics"],
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
+    },
     {
       icon: MessageSquare,
       title: "SMS Marketing Solution",
@@ -60,16 +91,16 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-24 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-6">
-            Our Solutions
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Services We Offer
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business operations 
-            and drive sustainable growth across various industries.
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            From AI integrations to mobile app development, we deliver cutting-edge solutions 
+            that transform your business operations and drive sustainable growth.
           </p>
         </div>
 
@@ -111,10 +142,6 @@ const ServicesSection = () => {
                     ))}
                   </ul>
                   
-                  <Button variant="outline" className="w-full group">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </CardContent>
               </Card>
             );

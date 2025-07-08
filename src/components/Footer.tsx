@@ -27,9 +27,9 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/009262a1-86e5-4662-a77e-5bf8b65811a4.png" 
+                src="/lovable-uploads/308035dd-e0f6-4b74-b000-bef648d52ac3.png" 
                 alt="Harley Systems" 
-                className="h-10 w-auto object-contain bg-transparent filter brightness-0 invert"
+                className="h-10 w-auto object-contain bg-transparent"
               />
               <span className="text-xl font-bold">Harley Systems</span>
             </div>

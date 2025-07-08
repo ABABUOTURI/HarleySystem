@@ -8,48 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Harley Systems Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 220 85% 15%;
+    /* Harley Systems Brand Colors - Deep Blue Theme */
+    --background: 220 85% 15%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 85% 15%;
+    --card: 220 85% 18%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 85% 15%;
+    --popover: 220 85% 18%;
+    --popover-foreground: 0 0% 98%;
 
     /* Primary: Deep Blue from logo */
-    --primary: 220 85% 25%;
+    --primary: 220 85% 15%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 220 85% 35%;
+    --primary-glow: 200 85% 65%;
 
     /* Secondary: Orange accent */
     --secondary: 25 85% 55%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 20% 96%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 220 20% 25%;
+    --muted-foreground: 220 15% 65%;
 
     /* Accent: Light blue for highlights */
-    --accent: 200 85% 85%;
+    --accent: 200 85% 65%;
     --accent-foreground: 220 85% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 220 85% 25%;
+    --border: 220 15% 35%;
+    --input: 220 15% 25%;
+    --ring: 220 85% 65%;
 
     /* Glassmorphism colors */
-    --glass-bg: 0 0% 100% / 0.1;
-    --glass-border: 0 0% 100% / 0.2;
-    --glass-shadow: 220 85% 15% / 0.1;
+    --glass-bg: 0 0% 100% / 0.08;
+    --glass-border: 0 0% 100% / 0.15;
+    --glass-shadow: 220 85% 15% / 0.2;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 15%) 0%, hsl(220 85% 25%) 50%, hsl(220 85% 15%) 100%);
     --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg)), hsl(0 0% 100% / 0.05));
+    
+    /* Glow animations */
+    --glow-orange: 25 85% 55%;
+    --glow-blue: 200 85% 65%;
 
     --radius: 0.5rem;
 
@@ -122,15 +126,27 @@ All colors MUST be HSL.
 @layer components {
   /* Glassmorphism effect utilities */
   .glass {
-    @apply backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg;
+    @apply backdrop-blur-lg bg-white/8 border border-white/15 shadow-xl;
   }
   
   .glass-card {
-    @apply glass rounded-xl p-6 transition-all duration-300 hover:bg-white/15;
+    @apply glass rounded-xl p-6 transition-all duration-300 hover:bg-white/12 hover:border-white/25;
   }
   
   .glass-nav {
-    @apply backdrop-blur-md bg-white/80 border-b border-white/20 shadow-sm;
+    @apply backdrop-blur-xl bg-white/8 border-b border-white/15 shadow-lg;
+  }
+
+  .glass-primary {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl shadow-2xl;
+  }
+
+  .glass-blue {
+    @apply backdrop-blur-xl bg-blue-400/10 border border-blue-400/20 rounded-2xl shadow-2xl;
+  }
+
+  .glass-orange {
+    @apply backdrop-blur-lg bg-orange-400/10 border border-orange-400/30 rounded-xl shadow-2xl;
   }
 
   /* Gradient utilities */
@@ -155,6 +171,18 @@ All colors MUST be HSL.
   .pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite alternate;
   }
+
+  .glow-orange {
+    animation: glow-orange 4s ease-in-out infinite alternate;
+  }
+
+  .glow-blue {
+    animation: glow-blue 3s ease-in-out infinite alternate;
+  }
+
+  .scroll-to-top {
+    @apply fixed bottom-6 right-6 z-50 glass-primary p-3 rounded-full text-white hover:scale-110 transition-all duration-300 cursor-pointer;
+  }
 }
 
 @layer utilities {
@@ -171,4 +199,26 @@ All colors MUST be HSL.
 @keyframes pulse-glow {
   0% { box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.3); }
   100% { box-shadow: 0 0 40px hsl(var(--primary-glow) / 0.6); }
+}
+
+@keyframes glow-orange {
+  0% { 
+    box-shadow: 0 0 30px hsl(var(--glow-orange) / 0.4);
+    transform: translateY(0px) scale(1);
+  }
+  100% { 
+    box-shadow: 0 0 60px hsl(var(--glow-orange) / 0.8);
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes glow-blue {
+  0% { 
+    box-shadow: 0 0 25px hsl(var(--glow-blue) / 0.3);
+    transform: translateX(0px) scale(1);
+  }
+  100% { 
+    box-shadow: 0 0 50px hsl(var(--glow-blue) / 0.7);
+    transform: translateX(10px) scale(1.02);
+  }
 }
