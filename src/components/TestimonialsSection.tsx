@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
 
             <div className="flex items-center justify-center">
               <img
-                src={testimonial.image}
+                // src={testimonial.image}
                 alt={testimonial.name}
                 className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-secondary/50"
               />
