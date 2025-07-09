@@ -65,10 +65,10 @@ const HeroSection = () => {
             </h1>
           </div>
 
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto text-shadow text-center">
+          <p className="text-base md:text-2xl text-white/90 max-w-3xl mx-auto text-shadow text-center">
             Empowering African Businesses Through Innovative Technology Solutions
           </p>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto text-center">
+          <p className="text-sm md:text-lg text-white/80 max-w-2xl mx-auto text-center">
             From SMS marketing to fleet management, from biometric solutions to payment integration -
             we build the technology that drives your business forward.
           </p>
