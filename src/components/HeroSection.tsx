@@ -57,18 +57,18 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8">
+        <div className="space-y-6">
           <div className="flex flex-col items-center space-y-4">
-            <h1 className="mt-24 text-7xl md:text-7xl font-bold text-shadow">
+            <h1 className="mt-20 text-5xl md:text-7xl font-bold text-shadow">
               <span className="text-white">Harley</span>
               <span className="text-orange-500"> Systems</span>
             </h1>
           </div>
 
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto text-shadow">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto text-shadow text-center">
             Empowering African Businesses Through Innovative Technology Solutions
           </p>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto text-center">
             From SMS marketing to fleet management, from biometric solutions to payment integration -
             we build the technology that drives your business forward.
           </p>
