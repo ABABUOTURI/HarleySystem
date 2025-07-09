@@ -60,19 +60,19 @@ const HeroSection = () => {
         <div className="space-y-4 md:space-y-6">
           <div className="flex flex-col items-center space-y-2 md:space-y-4">
             <h1 className="mt-10 md:mt-20 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-shadow">
-              <span className="text-white">Harley</span>
-              <span className="text-orange-500"> Systems</span>
-            </h1>
+            <span className="text-white">Harley</span>
+            <span className="text-orange-500"> Systems</span>
+          </h1>
           </div>
 
           <div className="flex flex-col items-center space-y-2 md:space-y-3 px-4 sm:px-8 md:px-0">
             <p className="text-sm sm:text-base md:text-2xl text-white/90 max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-shadow text-center">
-              Empowering African Businesses Through Innovative Technology Solutions
-            </p>
+            Empowering African Businesses Through Innovative Technology Solutions
+          </p>
             <p className="text-xs sm:text-sm md:text-lg text-white/80 max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-center">
-              From SMS marketing to fleet management, from biometric solutions to payment integration -
-              we build the technology that drives your business forward.
-            </p>
+            From SMS marketing to fleet management, from biometric solutions to payment integration - 
+            we build the technology that drives your business forward.
+          </p>
           </div>
 
           {/* <Button
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   <Zap className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-secondary mx-auto mb-2 sm:mb-4" />
                   <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Rapid Deployment</h3>
                   <p className="text-xs sm:text-sm text-white/80">Get your solution up and running in record time</p>
-                </div>
+            </div>
               ])}
             </div>
           </div>

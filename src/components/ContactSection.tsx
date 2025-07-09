@@ -60,30 +60,30 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-6">
+        <div className="text-center mb-10 sm:mb-14 md:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-4 sm:mb-6">
             Let's Build Something Amazing
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xs sm:max-w-xl md:max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge technology? 
             Get in touch and let's discuss your project requirements.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
           <Card className="glass-card">
             <CardHeader>
-              <CardTitle className="text-2xl">Send Us a Message</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-lg sm:text-2xl">Send Us a Message</CardTitle>
+              <CardDescription className="text-xs sm:text-base">
                 Tell us about your project and we'll get back to you with a detailed proposal.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Full Name *</Label>
@@ -132,7 +132,7 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="mt-1 min-h-32"
+                    className="mt-1 min-h-24 sm:min-h-32"
                     placeholder="Tell us about your project requirements, timeline, and any specific features you need..."
                   />
                 </div>
@@ -146,26 +146,26 @@ const ContactSection = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div className="glass-card">
-              <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-              <p className="text-muted-foreground mb-8">
+              <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6">Get In Touch</h3>
+              <p className="text-xs sm:text-base text-muted-foreground mb-4 sm:mb-8">
                 Whether you need a custom software solution, want to integrate new technologies, 
                 or have questions about our services, we're here to help.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div key={index} className="flex items-start space-x-3 sm:space-x-4 p-2 sm:p-4 rounded-lg hover:bg-muted/50 transition-colors">
                       <div className="flex-shrink-0">
-                        <Icon className="h-6 w-6 text-secondary mt-1" />
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-secondary mt-1" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                        <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">{item.title}</h4>
                         {item.details.map((detail, idx) => (
-                          <p key={idx} className="text-muted-foreground text-sm">{detail}</p>
+                          <p key={idx} className="text-muted-foreground text-xs sm:text-sm">{detail}</p>
                         ))}
                         <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
                       </div>
@@ -176,21 +176,21 @@ const ContactSection = () => {
             </div>
 
             {/* Office Image */}
-            <div className="relative overflow-hidden rounded-lg">
+            <div className="relative overflow-hidden rounded-lg min-h-32 sm:min-h-48">
               {/* <img 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" 
                 alt="Modern office space"
-                className="w-full h-64 object-cover"
+                className="w-full h-32 sm:h-64 object-cover"
               /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="font-semibold">Visit Our Office</h4>
-                <p className="text-sm opacity-90">Modern workspace in the heart of Nairobi</p>
+              <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 text-white">
+                <h4 className="font-semibold text-sm sm:text-base">Visit Our Office</h4>
+                <p className="text-xs sm:text-sm opacity-90">Modern workspace in the heart of Nairobi</p>
               </div>
             </div>
 
             {/* Quick Actions */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
               {/* <Button variant="outline" size="lg" className="h-auto py-4">
                 <div className="text-center">
                   <Phone className="h-5 w-5 mx-auto mb-2" />

@@ -53,27 +53,27 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section id="partners" className="py-24 bg-gradient-to-b from-background to-muted/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+    <section id="partners" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-10 sm:mb-14 md:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Our Partners
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-xs sm:max-w-xl md:max-w-3xl mx-auto">
             Building strong partnerships to deliver exceptional solutions across Africa
           </p>
         </div>
 
         {/* Partnership Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 mb-10 md:mb-16">
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="glass-primary text-center p-8 hover:scale-105 transition-all duration-300"
+              className="glass-primary text-center p-4 sm:p-8 hover:scale-105 transition-all duration-300"
             >
-              <stat.icon className="h-12 w-12 text-secondary mx-auto mb-4" />
-              <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
-              <p className="text-white/70">{stat.label}</p>
+              <stat.icon className="h-8 w-8 sm:h-12 sm:w-12 text-secondary mx-auto mb-2 sm:mb-4" />
+              <h3 className="text-xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">{stat.value}</h3>
+              <p className="text-xs sm:text-base text-white/70">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -90,10 +90,10 @@ const PartnersSection = () => {
                 <img 
                   src={partner.logo} 
                   alt={partner.name}
-                  className="w-full h-20 object-contain mb-4 rounded-lg bg-white/10 p-2"
+                  className="w-full h-16 sm:h-20 object-contain mb-2 sm:mb-4 rounded-lg bg-white/10 p-1 sm:p-2"
                 />
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold text-white">{partner.name}</h3>
+                <div className="flex items-center justify-between mb-1 sm:mb-2">
+                  <h3 className="text-base sm:text-lg font-bold text-white">{partner.name}</h3>
                   <a 
                     href={partner.website}
                     className="text-white/60 hover:text-secondary transition-colors duration-300"
@@ -102,33 +102,33 @@ const PartnersSection = () => {
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </div>
-                <span className="inline-block px-3 py-1 bg-secondary/20 text-secondary text-xs font-semibold rounded-full mb-3">
+                <span className="inline-block px-2 sm:px-3 py-1 bg-secondary/20 text-secondary text-xs font-semibold rounded-full mb-2 sm:mb-3">
                   {partner.type}
                 </span>
-                <p className="text-white/70 text-sm leading-relaxed">{partner.description}</p>
+                <p className="text-white/70 text-xs sm:text-sm leading-relaxed">{partner.description}</p>
               </div>
             </div>
           ))}
         </div> */}
 
         {/* Partnership CTA */}
-        <div className="text-center mt-16">
-          <div className="glass-primary p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="text-center mt-10 sm:mt-16">
+          <div className="glass-primary p-4 sm:p-8 max-w-xs sm:max-w-2xl md:max-w-4xl mx-auto">
+            <h3 className="text-lg sm:text-2xl font-bold text-white mb-2 sm:mb-4">
               Become Our Partner
             </h3>
-            <p className="text-white/80 mb-6">
+            <p className="text-xs sm:text-base text-white/80 mb-4 sm:mb-6">
               Join our network of trusted partners and help us deliver world-class solutions across Africa
             </p>
             <a
-  href="https://wa.me/254720143959"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
->
-  Partner With Us
-  <ExternalLink className="ml-2 h-4 w-4" />
-</a>
+              href="https://wa.me/254720143959"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 sm:px-8 py-2 sm:py-3 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              Partner With Us
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
 
           </div>
         </div>
