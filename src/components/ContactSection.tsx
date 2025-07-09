@@ -75,7 +75,7 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
-          <Card className="glass-card">
+          <Card className="glass-card max-w-lg mx-auto self-start">
             <CardHeader>
               <CardTitle className="text-lg sm:text-2xl">Send Us a Message</CardTitle>
               <CardDescription className="text-xs sm:text-base">
@@ -176,18 +176,18 @@ const ContactSection = () => {
             </div>
 
             {/* Office Image */}
-            <div className="relative overflow-hidden rounded-lg min-h-32 sm:min-h-48">
+            {/* <div className="relative overflow-hidden rounded-lg min-h-32 sm:min-h-48"> */}
               {/* <img 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" 
                 alt="Modern office space"
                 className="w-full h-32 sm:h-64 object-cover"
               /> */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
               <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 text-white">
                 <h4 className="font-semibold text-sm sm:text-base">Visit Our Office</h4>
                 <p className="text-xs sm:text-sm opacity-90">Modern workspace in the heart of Nairobi</p>
               </div>
-            </div>
+            </div> */}
 
             {/* Quick Actions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
